@@ -9,6 +9,8 @@
 .wrapper {
     background: url(../assets/anniversary-nahida-venti-raiden-zhongli-official-desktop-wallpaper-genshin.jpeg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 

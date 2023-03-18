@@ -1,10 +1,10 @@
 <template>
-    <v-footer color="#E39144" padless absolute>
+    <v-footer color="black" padless absolute>
       <v-col
         class="text-center"
         cols="12"
       >
-      &#169;{{ new Date().getFullYear() }} <strong>Segura Arquitectura</strong> all rights reserved
+      &#169;{{ new Date().getFullYear() }} <strong>Genshin Impact Wiki</strong> all rights reserved
       </v-col>
     </v-footer>
   </template>

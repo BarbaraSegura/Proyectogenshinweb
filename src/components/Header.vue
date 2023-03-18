@@ -1,18 +1,17 @@
 <template>
     <header class="top-nav">
-        <div><img class="logo" src="/src/assets/faviconM1.ico"></div>
+        <div><img class="logo" src="/src/assets/[CITYPNG.COM]HD White Genshin Impact Game Logo PNG - 2000x1205.png"></div>
         <input id="menu-toggle" type="checkbox" />
         <label class='menu-button-container' for="menu-toggle">
             <div class='menu-button'></div>
         </label>
         <nav class="menu">
-            <RouterLink class="link" to="/">Home</RouterLink>
-            <RouterLink class="link" to="/login">Servicios</RouterLink>
-            <RouterLink class="link" to="/signup">Acerca de nosotros</RouterLink>
-            <RouterLink class="link" to="/animals/search">Contacto</RouterLink>
+            <RouterLink class="link" to="/">Inicio</RouterLink>
+            <RouterLink class="link" to="/personajes">Personajes</RouterLink>
+            <RouterLink class="link" to="/contenidos">Contenidos</RouterLink>
         </nav>
         <div class="d-flex justify-space-around align-center flex-column flex-md-row fill-height">
-                <v-btn color="Yellow">
+                <v-btn color="amber">
                     Descarga
                 </v-btn>
             </div>
@@ -33,13 +32,9 @@ body {
     height: 100%;
 }
 
-h2 {
-    vertical-align: center;
-    text-align: center;
-}
 
 .logo {
-    height: 40px;
+    height: 100px;
 }
 
 .top-nav {
@@ -48,7 +43,8 @@ h2 {
     align-items: center;
     justify-content: space-between;
     //background: linear-gradient(to left, #f46b45, #eea849);
-    background: #A87551;
+    //background: #A87551 0.5%;
+    background: rgba(168, 117, 81, 0.8);
     color: #FFF;
     height: 75px;
     padding: 1em;
