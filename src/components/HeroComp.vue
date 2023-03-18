@@ -7,7 +7,7 @@
 
 <style lang="scss" scoped>
 .wrapper {
-    background: url(../assets/Nahida.gif);
+    background: url(../assets/anniversary-nahida-venti-raiden-zhongli-official-desktop-wallpaper-genshin.jpeg);
     background-size: cover;
 }
 
