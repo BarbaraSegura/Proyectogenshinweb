@@ -1,0 +1,24 @@
+<template>
+    <div class="wrapper">
+        <div class="container">
+        </div>
+</div>
+</template>
+
+<style lang="scss" scoped>
+.wrapper {
+    background: url(../assets/Nahida.gif);
+    background-size: cover;
+}
+
+
+.container {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+</style>
