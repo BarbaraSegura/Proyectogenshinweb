@@ -44,7 +44,7 @@ body {
     justify-content: space-between;
     //background: linear-gradient(to left, #f46b45, #eea849);
     //background: #A87551 0.5%;
-    background: rgba(168, 117, 81, 0.8);
+    background: rgba(185, 156, 113, .8);
     color: #FFF;
     height: 75px;
     padding: 1em;
@@ -61,7 +61,7 @@ body {
 }
 
 .menu {
-    display: flex;
+    display: inline-block;
     gap: 20px;
     width: 100%;
     justify-content: flex-end;
@@ -71,6 +71,16 @@ body {
     padding: 0;
     text-decoration: none;
 
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    list-style-type: none;
+    margin-left: 30px;
+    transition: .4s;
 }
 
 #menu-toggle {
