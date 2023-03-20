@@ -9,6 +9,7 @@
             <RouterLink class="link" to="/">Inicio</RouterLink>
             <RouterLink class="link" to="/personajes">Personajes</RouterLink>
             <RouterLink class="link" to="/contenidos">Contenidos</RouterLink>
+            <RouterLink class="link" to="/game">Presentación del juego</RouterLink>
         </nav>
         <div class="d-flex justify-space-around align-center flex-column flex-md-row fill-height">
                 <v-btn color="amber">
