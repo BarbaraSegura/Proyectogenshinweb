@@ -42,8 +42,8 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-   // background: rgba(185, 156, 113, .8);
-    background: linear-gradient(0deg, rgba(255,255,255,) 10%, rgba(185, 156, 113, .8) 65%);
+    background: rgba(185, 156, 113, .8);
+    //background: linear-gradient(0deg, rgba(255,255,255,) 10%, rgba(185, 156, 113, .8) 65%);
     height: 75px;
     padding: 1em;
 }
