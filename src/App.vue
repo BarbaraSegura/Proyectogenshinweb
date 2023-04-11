@@ -7,8 +7,8 @@
         name="fade">
       <router-view class="view"/>
       </transition>
-      <Footer></Footer>
     </v-main>
+    <Footer></Footer>
   </v-app>
 </template>
 

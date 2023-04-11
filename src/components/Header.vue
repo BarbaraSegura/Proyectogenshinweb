@@ -1,136 +1,131 @@
 <template>
-    <header class="top-nav">
-        <div><img class="logo" src="/src/assets/[CITYPNG.COM]HD White Genshin Impact Game Logo PNG - 2000x1205.png"></div>
-        <input id="menu-toggle" type="checkbox" />
-        <label class='menu-button-container' for="menu-toggle">
-            <div class='menu-button'></div>
-        </label>
-        <nav class="menu">
-            <RouterLink class="link" to="/">Inicio</RouterLink>
-            <RouterLink class="link" to="/personajes">Personajes</RouterLink>
-            <RouterLink class="link" to="/contenidos">Contenidos</RouterLink>
-            <RouterLink class="link" to="/game">Presentación del juego</RouterLink>
-        </nav>
-        <div class="d-flex justify-space-around align-center flex-column flex-md-row fill-height">
-                <v-btn color="amber">
-                    Descarga
-                </v-btn>
+    <div class="header" style="transform: translateX(0px);">
+        <div id="frame" class="root root-es" style="">
+            <div class="audio-controller" style="transform: translateX(0px);"><img src="/src/assets/descarga.png"
+                    class="audio-controller--off"></div>
+        </div>
+        <div class="header__logo">
+            <img src="/src/assets/descarga logo.png" alt="logo">
+        </div>
+        <div class="header__navwrap">
+            <div class="header__navbar">
+                <a href="/" aria-current="page" class="header__navitem header__navitem--focus">Inicio</a>
+                <a href="/es/news" class="header__navitem">Noticias</a>
+                <a href="/personajes" class="header__navitem">Personajes</a>
+                <div class="header__navitem header__navitem__more">
+                    <p>Recursos</p>
+                    <ul class="header__navitem__sublist">
+                        <li><a href="/es/game" class="header__navlink">Presentación del juego</a></li>
+                        <li><a href="/es/map" class="header__navlink">Mundo</a></li>
+                        <li><a href="/es/town" class="header__navlink">Explorar</a></li>
+                        <li><a href="/es/manga" class="header__navlink">Manga</a></li>
+                    </ul>
+                </div>  
             </div>
-    </header>
-</template>        
+        </div>
+    </div>    
+</template>
 
 <style lang="scss" scoped>
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-
-* {
-    font-family: "Raleway";
-    box-sizing: border-box;
+.header--scroll {
+    background-color: rgba(17, 17, 17, 0.85);
 }
 
-html,
-body {
-    margin: 0;
-    height: 100%;
-}
-
-
-.logo {
-    height: 100px;
-}
-
-.top-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(185, 156, 113, .8);
-    //background: linear-gradient(0deg, rgba(255,255,255,) 10%, rgba(185, 156, 113, .8) 65%);
-    height: 75px;
-    padding: 1em;
-}
-
-.menu-button-container {
-    display: none;
-    height: 100%;
+.root .audio-controller--on,
+.root .audio-controller--off {
     width: 30px;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 30px;
+    cursor: pointer
 }
 
-.menu {
-    display: inline-block;
-    gap: 20px;
+.root .audio-controller {
+    position: fixed;
+    top: 18px;
+    left: 70px;
+    z-index: 10000
+}
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
     width: 100%;
-    justify-content: flex-end;
-    flex-direction: row;
+    min-width: 1280px;
+    height: 66px;
+    background-color: rgba(17, 17, 17, 0.85);
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
+}
+.header__logo {
+    float: left ;
+    width: 317px;
+    height: 105px;
+    margin-left: 60px;
+}
+.header__navwrap {
+    display: inline-block;
+    position: relative;
+    margin-left: -34px;
+}
+
+.header__navbar {
+    display: inline-block;
     list-style-type: none;
-    margin: 0 10px;
-    padding: 0;
+    padding-right: 10px;
+    margin-left: 40px;
+}
+
+.header__navbar .header__navitem {
+    font-size: 14px;
+    margin: 0 15px !important;
+}
+
+.header__navitem--focus {
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+    color: #fff;
+}
+.header__navitem {
+    display: flex;
+    align-items: center;
+    position: relative;
+    float: left;
+    width: auto;
+    height: 66px;
+    margin: 0 20px !important;
+    line-height: 66px;
+    font-size: 17px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #ccc;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     text-decoration: none;
-
 }
-
-.link {
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
-    font-weight: 600;
-    list-style-type: none;
-    margin-left: 30px;
-    transition: .4s;
-}
-
-#menu-toggle {
-    display: none;
-}
-
-.menu-button,
-.menu-button::before,
-.menu-button::after {
-    display: block;
-    background-color: #fff;
+.header__navitem__sublist {
     position: absolute;
-    height: 4px;
-    width: 30px;
-    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    border-radius: 2px;
+    top: 66px;
+    left: -20px;
+    background: #272626;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+    border-radius: 1px;
+    pointer-events: none;
 }
-
-.menu-button::before {
-    content: '';
-    margin-top: -8px;
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
 }
-
-.menu-button::after {
-    content: '';
-    margin-top: 8px;
-}
-
-#menu-toggle:checked+.menu-button-container .menu-button::before {
-    margin-top: 0px;
-    transform: rotate(405deg);
-}
-
-#menu-toggle:checked+.menu-button-container .menu-button {
-    background: rgba(255, 255, 255, 0);
-}
-
-#menu-toggle:checked+.menu-button-container .menu-button::after {
-    margin-top: 0px;
-    transform: rotate(-405deg);
-}
-
-@media (max-width: 500px) {
-    .menu-button-container {
-        display: flex;
-        height: 100%;
-        width: 30px;
-        cursor: pointer;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
 }
 </style>

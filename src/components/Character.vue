@@ -1,42 +1,34 @@
 <template>
-    <div class="wrapper">
-        <div class="container">
-            <div class="carrousel"><v-sheet class="mx-auto" elevation="8" max-width="800">
-                    <v-slide-group v-model="model" class="pa-4" selected-class="bg-success" show-arrows>
-                        <v-slide-group-item v-for="n in 15" :key="n" v-slot="{ isSelected, toggle, selectedClass }">
-                            <v-card color="grey-lighten-1" :class="['ma-4', selectedClass]" height="150" width="100"
-                                @click="toggle">
-                                <div class="d-flex fill-height align-center justify-center">
-                                    <v-scale-transition>
-                                        <v-icon v-if="isSelected" color="white" size="48"></v-icon>
-                                    </v-scale-transition>
-                                </div>
-                            </v-card>
-                        </v-slide-group-item>
-                    </v-slide-group>
-                </v-sheet>
+    <div id="frame" class="root root-es" style>
+        <div class="content-wrap">
+            <div class="character__wrap">
+                <div class="character">
+                    <div class="character__bg character__bg1"
+                        style="background-image: url(&quot;https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200211/2020021114281584004.jpg&quot;);">
+                    </div>
+                    <div class="character__bg character__bg2"
+                        style="background-image: url(&quot;https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200211/2020021114281985438.jpg&quot;);">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-export default {
-    data: () => ({
-        model: null,
-    }),
-}
+
 </script>
 
 <style lang="scss" scoped>
-.wrapper {
-    background: url(../assets/wp8732334-mondstadt-wallpapers.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+.root .content-wrap {
+    visibility: visible;
+}
+.character {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 12px;
 }
 
-.carrousel {
-    padding-top: 450px;
-}
 </style>
