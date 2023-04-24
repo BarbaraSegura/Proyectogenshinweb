@@ -1,31 +1,49 @@
 <template>
-    <section class="city">
-        <ul class="city__list">
-            <li class="city__list-item">
-                <div class="city__list-bg"
-                    src="/src/assets/mondstart.jpeg">
-                </div> <a href="/es/character/mondstadt" class="">
-                <p>Mondstadt</p>
-            </a>
-            <div class="city__list-char"
-                src="/src/assets/2021061518151058323.png">
-            </div>
-        </li>
-    </ul>
-</section>
+    <div class="card"></div>
+    <div class="card2"></div>
+    <div class="card3"></div>
 </template>  
 
 <style lang="scss" scoped>
-ul, li {
-    list-style: none;
+.card {
+ min-width: 100%;
+ height: 230px;
+ /*background: rgb(46, 44, 44);*/
+ background: url(../assets/mondstart.jpeg);
+ transition: all 300ms;
 }
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
+
+.card:hover {
+ opacity: 0.8;
+ transform: scale(1.10);
 }
+
+.card2 {
+padding-top: 54px;
+ min-width: 100%;
+ height: 230px;
+ /*background: rgb(46, 44, 44);*/
+ background: url(../assets/mondstart.jpeg);
+ transition: all 300ms;
+}
+
+.card2:hover {
+ opacity: 0.8;
+ transform: scale(1.10);
+}
+
+.card3 {
+padding-top: 54px;
+ min-width: 100%;
+ height: 230px;
+ /*background: rgb(46, 44, 44);*/
+ background: url(../assets/mondstart.jpeg);
+ transition: all 300ms;
+}
+
+.card3:hover {
+ opacity: 0.8;
+ transform: scale(1.10);
+}
+
 </style>

@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div class="container">
             <div class="home">
-                <video class="video-slide" src="../assets/nahida-genshin-impact-moewalls.com (1).mp4" autoplay muted loop></video>
+                <!-- <video class="video-slide" src="../assets/nahida-genshin-impact-moewalls.com (1).mp4" autoplay muted loop></video> -->
             </div>
         </div>    
             <div class="content">
@@ -37,14 +37,14 @@
     left: 0;
 }
 .wrapper {
-    //background: url(../assets/anniversary-nahida-venti-raiden-zhongli-official-desktop-wallpaper-genshin.jpeg);
+    background: url(../assets/anniversary-nahida-venti-raiden-zhongli-official-desktop-wallpaper-genshin.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     //padding-top: 250px;
 }
 .container {
-    height: 550px;
+    height: 500px;
     width: 100%;
     display: flex;
     justify-content: flex-start;

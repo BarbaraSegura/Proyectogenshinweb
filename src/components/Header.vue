@@ -9,7 +9,7 @@
         </div>
         <div class="header__navwrap">
             <div class="header__navbar">
-                <a href="/" aria-current="page" class="header__navitem header__navitem--focus">Inicio</a>
+                <a href="/" aria-current="page" class="header__navitem">Inicio</a>
                 <a href="/es/news" class="header__navitem">Noticias</a>
                 <a href="/personajes" class="header__navitem">Personajes</a>
                 <div class="header__navitem header__navitem__more">
@@ -79,10 +79,6 @@
     margin: 0 15px !important;
 }
 
-.header__navitem--focus {
-    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
-    color: #fff;
-}
 .header__navitem {
     display: flex;
     align-items: center;

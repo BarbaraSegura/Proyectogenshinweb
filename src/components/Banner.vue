@@ -2,10 +2,11 @@
     <div class="wrapper">
         <div class="container">
             <div class="main-text">
-            <h1>Lanzamiento mundial <br> en múltiples plataformas</h1>
-            <h3>28 de septiembre de 2020 (10:00) (GTM +8)</h3>
+                <h1>Lanzamiento mundial <br> en múltiples plataformas</h1>
+                <h3>28 de septiembre de 2020 (10:00) (GTM +8)</h3>
             </div>
         </div>
+        <div class="spacer"></div> <!-- Agregar un espacio vacío -->
     </div>
 </template>
 
@@ -18,12 +19,12 @@
 }
 
 .container {
-    padding-top: 600px;
+    padding-top: 600px; /* Ajustar la propiedad para evitar que se superponga con el footer */
     padding-left: 530px;
 }
 
 .container .main-text{
-    position: relative;
+    position: absolute;
     z-index: 2;
     margin-bottom: 50px;
     color: white;
@@ -36,4 +37,7 @@
     line-height: 1.5;
 }
 
+.spacer {
+    height: 100px; /* Agregar un espacio vacío con altura igual a la propiedad ajustada en .container */
+}
 </style>
