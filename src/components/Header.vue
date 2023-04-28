@@ -1,29 +1,33 @@
 <template>
-    <div class="header" style="transform: translateX(0px);">
-        <div id="frame" class="root root-es" style="">
-            <div class="audio-controller" style="transform: translateX(0px);"><img src="/src/assets/descarga.png"
-                    class="audio-controller--off"></div>
-        </div>
-        <div class="header__logo">
-            <img src="/src/assets/descarga logo.png" alt="logo">
-        </div>
-        <div class="header__navwrap">
-            <div class="header__navbar">
-                <a href="/" aria-current="page" class="header__navitem">Inicio</a>
-                <a href="/es/news" class="header__navitem">Noticias</a>
-                <a href="/personajes" class="header__navitem">Personajes</a>
-                <div class="header__navitem header__navitem__more">
-                    <p>Recursos</p>
-                    <ul class="header__navitem__sublist">
-                        <li><a href="/es/game" class="header__navlink">Presentación del juego</a></li>
-                        <li><a href="/es/map" class="header__navlink">Mundo</a></li>
-                        <li><a href="/es/town" class="header__navlink">Explorar</a></li>
-                        <li><a href="/es/manga" class="header__navlink">Manga</a></li>
-                    </ul>
-                </div>  
-            </div>
-        </div>
-    </div>    
+    <v-container fluid>
+        <v-row class="header" style="transform: translateX(0px);" app height="auto">
+            <v-col cols="12">
+                <div id="frame" class="root root-es" style="">
+                    <div class="audio-controller" style="transform: translateX(0px);"><img src="/src/assets/descarga.png"
+                            class="audio-controller--off"></div>
+                </div>
+                <div class="header__logo">
+                    <img src="/src/assets/descarga logo.png" alt="logo">
+                </div>
+                <div class="header__navwrap">
+                    <div class="header__navbar">
+                        <a href="/" aria-current="page" class="header__navitem">Inicio</a>
+                        <a href="/es/news" class="header__navitem">Noticias</a>
+                        <a href="/personajes" class="header__navitem">Personajes</a>
+                        <div class="header__navitem header__navitem__more">
+                            <p>Recursos</p>
+                            <ul class="header__navitem__sublist">
+                                <li><a href="/es/game" class="header__navlink">Presentación del juego</a></li>
+                                <li><a href="/es/map" class="header__navlink">Mundo</a></li>
+                                <li><a href="/es/town" class="header__navlink">Explorar</a></li>
+                                <li><a href="/es/manga" class="header__navlink">Manga</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </v-col>
+        </v-row>
+    </v-container>
 </template>
 
 <style lang="scss" scoped>
@@ -44,23 +48,19 @@
     left: 70px;
     z-index: 10000
 }
+
 .header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 999;
-    width: 100%;
-    min-width: 1280px;
-    height: 66px;
     background-color: rgba(17, 17, 17, 0.85);
     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
 }
+
 .header__logo {
-    float: left ;
+    float: left;
     width: 317px;
     height: 105px;
     margin-left: 60px;
 }
+
 .header__navwrap {
     display: inline-block;
     position: relative;
@@ -101,6 +101,7 @@
     user-select: none;
     text-decoration: none;
 }
+
 .header__navitem__sublist {
     position: absolute;
     top: 66px;
@@ -111,6 +112,7 @@
     border-radius: 1px;
     pointer-events: none;
 }
+
 ul {
     display: block;
     list-style-type: disc;
@@ -120,6 +122,7 @@ ul {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
+
 li {
     display: list-item;
     text-align: -webkit-match-parent;
