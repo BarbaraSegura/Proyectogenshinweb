@@ -1,130 +1,48 @@
 <template>
-    <v-container fluid>
-        <v-row class="header" style="transform: translateX(0px);" app height="auto">
-            <v-col cols="12">
-                <div id="frame" class="root root-es" style="">
-                    <div class="audio-controller" style="transform: translateX(0px);"><img src="/src/assets/descarga.png"
-                            class="audio-controller--off"></div>
-                </div>
-                <div class="header__logo">
-                    <img src="/src/assets/descarga logo.png" alt="logo">
-                </div>
-                <div class="header__navwrap">
-                    <div class="header__navbar">
-                        <a href="/" aria-current="page" class="header__navitem">Inicio</a>
-                        <a href="/es/news" class="header__navitem">Noticias</a>
-                        <a href="/personajes" class="header__navitem">Personajes</a>
-                        <div class="header__navitem header__navitem__more">
-                            <p>Recursos</p>
-                            <ul class="header__navitem__sublist">
-                                <li><a href="/es/game" class="header__navlink">Presentación del juego</a></li>
-                                <li><a href="/es/map" class="header__navlink">Mundo</a></li>
-                                <li><a href="/es/town" class="header__navlink">Explorar</a></li>
-                                <li><a href="/es/manga" class="header__navlink">Manga</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </v-col>
-        </v-row>
-    </v-container>
+  <v-app-bar app class="header" color="rgba(17, 17, 17, 0.85)" dark dense>
+    <v-toolbar-title>
+      <v-img src="/src/assets/descarga logo.png" alt="logo" height="64" class="header__logo"></v-img>
+    </v-toolbar-title>
+    <v-spacer></v-spacer>
+    <nav class="header__navbar">
+      <a href="/" aria-current="page" class="header__navitem">Inicio</a>
+      <a href="/es/news" class="header__navitem">Noticias</a>
+      <a href="/personajes" class="header__navitem nuxt-link-active">Personajes</a>
+    </nav>
+  </v-app-bar>
 </template>
 
-<style lang="scss" scoped>
-.header--scroll {
-    background-color: rgba(17, 17, 17, 0.85);
+<style>
+.header__menubutton {
+  font-size: 24px;
 }
-
-.root .audio-controller--on,
-.root .audio-controller--off {
-    width: 30px;
-    height: 30px;
-    cursor: pointer
-}
-
-.root .audio-controller {
-    position: fixed;
-    top: 18px;
-    left: 70px;
-    z-index: 10000
-}
-
-.header {
-    background-color: rgba(17, 17, 17, 0.85);
-    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
-}
-
-.header__logo {
-    float: left;
-    width: 317px;
-    height: 105px;
-    margin-left: 60px;
-}
-
-.header__navwrap {
-    display: inline-block;
-    position: relative;
-    margin-left: -34px;
-}
-
 .header__navbar {
-    display: inline-block;
-    list-style-type: none;
-    padding-right: 10px;
-    margin-left: 40px;
-}
-
-.header__navbar .header__navitem {
-    font-size: 14px;
-    margin: 0 15px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  padding-right: 500px;
+  position: relative;
 }
 
 .header__navitem {
-    display: flex;
-    align-items: center;
-    position: relative;
-    float: left;
-    width: auto;
-    height: 66px;
-    margin: 0 20px !important;
-    line-height: 66px;
-    font-size: 17px;
-    font-weight: normal;
-    font-stretch: normal;
-    letter-spacing: 0;
-    color: #ccc;
-    text-align: center;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    text-decoration: none;
+  display: inline-block;
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  line-height: 80px;
+  border-bottom: 3px solid transparent;
 }
 
-.header__navitem__sublist {
-    position: absolute;
-    top: 66px;
-    left: -20px;
-    background: #272626;
-    opacity: 0;
-    transition: all 0.2s ease-in;
-    border-radius: 1px;
-    pointer-events: none;
+.header {
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
 }
 
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
-
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+.header__logo {
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
 </style>

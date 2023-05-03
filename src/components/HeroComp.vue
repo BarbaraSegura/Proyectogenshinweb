@@ -1,66 +1,94 @@
 <template>
-    <div class="wrapper">
-        <div class="container">
-            <div class="home">
-                <video class="video-slide" src="../assets/Genshin Impact - 4 Archon [ Live Wallpaper ].mp4" autoplay muted loop></video>
+    <div>
+        <section class="main">
+            <div class="video-container">
+                <video class="video-slide" src="../assets/Genshin Impact - 4 Archon [ Live Wallpaper ].mp4" autoplay muted
+                    loop></video>
             </div>
-        </div>    
-            <div class="content">
-                <div class="main-text">
-                <p>¡Bievenido a Genshin Impact Wiki! La web que reune toda la información disponible sobre los personajes, habilidades, localizaciones, misiones ¡y más! de Genshin Impact.</p><br>
-
-<p>Genshin Impact es un juego de rol de acción de mundo abierto desarrollado y publicado por Hoyoverse para plataformas PC, iOS / Android y PS4. El juego es Free-to-Play con un sistema de monetización interna, conocida dentro del juego como Gachapón.</p>
+            <section class="hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Genshin Impact Wiki</h1>
+                    <p class="hero-subtitle">La web que reune toda la información disponible sobre los personajes,
+                        habilidades,
+                        localizaciones, misiones ¡y más! de Genshin Impact.</p>
                 </div>
-            </div>
-</div>
+            </section>
+        </section>    
+    </div>
 </template>
 
 <style lang="scss" scoped>
-
-.home {
+/* Estilos para la sección hero */
+.hero {
     position: relative;
-    width: 100%;
-    height: 950px;
-    //min-height: 100vh;
+    height: 100vh;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
-.home:before {
-    z-index: 777;
-    content: '';
+
+.hero-overlay {
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
-}
-.wrapper {
-    //background: url(../assets/anniversary-nahida-venti-raiden-zhongli-official-desktop-wallpaper-genshin.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    //padding-top: 250px;
-}
-.container {
-    height: 500px;
+    height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-}
-.content {
-    padding-top: 0px;
 }
 
-.content .main-text{
+.hero-content {
     position: relative;
-    z-index: 2;
-    color: black;
-    max-width: 100%;
-
+    z-index: 1;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(114,71,21,0.68);
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
 }
 
-</style>
+.hero-title {
+    font-size: 72px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 28px;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 2px;
+}
+
+/* Estilos para la sección principal */
+.main {
+    position: relative;
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.video-slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+
+</style> 
