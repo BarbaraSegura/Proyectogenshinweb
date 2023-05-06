@@ -1,17 +1,20 @@
 <template>
-	<v-container class="wrapper" fluid>
+	<v-container class="wrapper" fluid :style="backgroundStyle">
 		<!-- V-row es donde tengo que mirar lo de los pjs -->
 		<v-row>
 			<v-col>
-				<v-card v-if="showpj" class="back2" height="500" width="100vw" flat>
+				<v-card v-if="showpj" class="back2" height="500" width="200vh" flat>
 					<v-img :src="solopj.imagen" class="imagen">
-						<v-card-title>{{ solopj.name }}</v-card-title>
-						<v-card-text>
+						<v-card-title class="custom-title">
+							{{ solopj.name }}
+						</v-card-title>
+						<v-card-text class="custom-subtitle">
 							{{ solopj.nation }} <br>
 						</v-card-text>
 						<v-card-text class="description" v-if="showDescription">
 							{{ solopj.description }}
 						</v-card-text>
+            <v-img :src="solopj.vision" class="imagenvision"></v-img>
 					</v-img>
 				</v-card>
 			</v-col>
@@ -37,8 +40,6 @@
 
 <script>
 import nombre from '../services/api'
-import FichaPersonaje from './FichaPersonaje.vue';
-
 
 export default {
 	data: () => ({
@@ -53,9 +54,9 @@ export default {
 			{ nation: "Liyue", img: 'https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200526/2020052612332812636.jpg' },
 			{ nation: "Inazuma", img: 'https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210715/2021071516524062780.jpg' },
 			{ nation: "Sumeru", img: 'https://webstatic.hoyoverse.com/upload/contentweb/2022/08/15/04d542b08cdee91e5dabfa0e85b8995e_4692024198088601985.jpg' },
-
 		],
 		showDescription: false,
+		amulet: "",
 	}),
 	async created() {
 		const personaje = await nombre.getCharacters();
@@ -69,41 +70,24 @@ export default {
 				if (personaje.name === name) {
 					this.solopj = personaje
 					this.country = personaje.nation
+					this.amulet = personaje.vision
 					this.showDescription = true
 				}
 			})
-			//this.nationBack()
 			return response
 		},
-		/* nationBack() {
-			console.log(this.country)
-			return this.nations.filter((el)=> {
-				console.log(el) 
-				if(el.nation.toUpperCase()===this.country.toUpperCase()) {
-					return {
-						"background": `url(${el.img})`
-					}
-				}
-				else {
-					return {
-						"background": `url(https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200211/2020021114281584004.jpg)`
-					}
-				}
-			})
-		} */
 	},
 	computed: {
-		backGround() {
-			console.log(this.solopj.imagen)
+		backgroundStyle() {
+			const nation = this.solopj.nation;
+			const selectedNation = this.nations.find((el) => el.nation === nation);
+			const backgroundImage = selectedNation ? selectedNation.img : this.nations[0].img;
 			return {
-				"background": `url(${this.solopj.imagen})`
-			}
+				background: `url(${backgroundImage})`,
+			};
 		},
-
 	},
-	components: { FichaPersonaje }
 }
-
 
 </script>
 
@@ -114,23 +98,22 @@ export default {
 	background-repeat: no-repeat;
 	background-position: center center;
 	width: 100%;
-	z-index: 900;
 	position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
+	top: 0;
+	left: 0;
+	height: 100%;
 }
 
 .back {
 	background-color: rgba(0, 0, 0, 0.2);
-	bottom: 10px;
-	padding-bottom: 80px;
+	margin-top: -10px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .back2 {
 	background-color: rgba(0, 0, 0, 0);
-	padding-left: 40px;
-	padding-top: 40px;
+	padding-top: 47px;
 
 }
 
@@ -159,11 +142,49 @@ export default {
 	text-align: left;
 	line-height: 26px;
 	width: 455px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-	font-size: 16px; 
-	background: rgba(1,1,1,0.5);
-	color: white; 
-	height: 130px; 
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 16px;
+	background: rgba(1, 1, 1, 0.5);
+	color: white;
+	height: 130px;
 	overflow: auto;
+}
+
+.imagen {
+	position: relative;
+	width: 1600px;
+	height: 1400px;
+	overflow: hidden;
+	padding-top: 100px;
+	background: url(https://genshin.hoyoverse.com/_nuxt/img/6c9d197.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+}
+
+.imagenvision {
+	position: relative;
+	height: 200px;
+	opacity: 0.1;
+	left: calc(20% - 20vh);
+	top: calc(70% - 70vh);
+	margin-top: -10px;
+	padding-bottom: 150px;
+	width: 70vh;
+}
+
+.custom-title {
+	width: 70vh;
+	font-size: 30px;
+	margin-top: 20px;
+	color: white;
+	text-transform: uppercase;
+}
+.custom-subtitle {
+	width: 70vh;
+	font-size: 20px;
+	margin-top: 10px;
+	color: white;
 }
 </style>

@@ -1,6 +1,5 @@
 <template>
   <HeroComp></HeroComp>
-  <Regions></Regions>
 </template>
 
 <script>

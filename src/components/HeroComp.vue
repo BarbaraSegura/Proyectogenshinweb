@@ -1,21 +1,21 @@
 <template>
-    <div>
-        <section class="main">
-            <div class="video-container">
-                <video class="video-slide" src="../assets/Genshin Impact - 4 Archon [ Live Wallpaper ].mp4" autoplay muted
-                    loop></video>
-            </div>
-            <section class="hero">
-                <div class="hero-overlay"></div>
-                <div class="hero-content">
-                    <h1 class="hero-title">Genshin Impact Wiki</h1>
-                    <p class="hero-subtitle">La web que reune toda la información disponible sobre los personajes,
-                        habilidades,
-                        localizaciones, misiones ¡y más! de Genshin Impact.</p>
+        <div>
+            <section class="main">
+                <div class="video-container">
+                    <video class="video-slide" src="../assets/Genshin Impact - 4 Archon [ Live Wallpaper ].mp4" autoplay
+                        muted loop></video>
                 </div>
+                <section class="hero">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content">
+                        <h1 class="hero-title">Genshin Impact Wiki</h1>
+                        <p class="hero-subtitle">La web que reune toda la información disponible sobre los personajes,
+                            habilidades,
+                            localizaciones, misiones ¡y más! de Genshin Impact.</p>
+                    </div>
+                </section>
             </section>
-        </section>    
-    </div>
+        </div>
 </template>
 
 <style lang="scss" scoped>
@@ -32,7 +32,6 @@
 }
 
 .hero-overlay {
-    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
@@ -40,10 +39,10 @@
 }
 
 .hero-content {
-    position: relative;
+    position: fixed;
     z-index: 1;
     text-align: center;
-    text-shadow: 0 0 10px rgba(114,71,21,0.68);
+    text-shadow: 0 0 10px rgba(114, 71, 21, 0.68);
     font-family: Tahoma, Helvetica, Arial, sans-serif;
 }
 
@@ -66,14 +65,14 @@
 /* Estilos para la sección principal */
 .main {
     position: relative;
-    height: 88vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .video-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
@@ -90,5 +89,4 @@
     height: auto;
     transform: translate(-50%, -50%);
 }
-
 </style> 

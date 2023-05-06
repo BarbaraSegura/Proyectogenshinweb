@@ -1,16 +1,19 @@
 <template>
-    <Regions></Regions>
+    <Explorar></Explorar>
+    <ExplorarM></ExplorarM>
   </template>
   
   <script>
   import { defineComponent } from 'vue';
-  import Regions from '../components/Regions.vue';
+  import Explorar from '../components/Explorar.vue';
+  import ExplorarM from '../components/ExplorarM.vue';
   
   export default defineComponent({
-    name: 'RegionsView',
+    name: 'ExplorarView',
   
     components: {
-      Regions,
+      Explorar,
+      ExplorarM
   }
   });
   </script>

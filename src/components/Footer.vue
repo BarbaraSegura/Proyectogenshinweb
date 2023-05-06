@@ -9,7 +9,7 @@
   </footer>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .footer {
   position: fixed;
   bottom: 0;
@@ -19,7 +19,6 @@
   background-color: #23272a;
   color: #fff;
   font-size: 1.2rem;
-  z-index: 800;
 }
 
 .footer-nav {

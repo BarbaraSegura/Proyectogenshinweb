@@ -6,16 +6,14 @@
     <v-spacer></v-spacer>
     <nav class="header__navbar">
       <a href="/" aria-current="page" class="header__navitem">Inicio</a>
-      <a href="/es/news" class="header__navitem">Noticias</a>
-      <a href="/personajes" class="header__navitem nuxt-link-active">Personajes</a>
+      <a href="/game" class="header__navitem">Game</a>
+      <a href="/regions" class="header__navitem">Explorar</a>
+      <a href="/personajes" class="header__navitem nuxt-link-active" style="margin-left: auto;">Personajes</a>
     </nav>
   </v-app-bar>
 </template>
 
-<style>
-.header__menubutton {
-  font-size: 24px;
-}
+<style lang="scss" scoped>
 .header__navbar {
   display: flex;
   align-items: center;
@@ -41,8 +39,11 @@
 }
 
 .header__logo {
-  position: absolute;
+  /* Cambiar la posición de "absolute" a "relative" para que se ajuste al espacio del app bar */
+  position: relative;
   top: 50%;
-  left: 0;
+  /* Eliminar "left: 0" para que el logo no se posicione en la esquina superior izquierda */
 }
+
 </style>
+
