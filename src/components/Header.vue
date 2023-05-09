@@ -6,7 +6,7 @@
     <v-spacer></v-spacer>
     <nav class="header__navbar">
       <a href="/" aria-current="page" class="header__navitem">Inicio</a>
-      <a href="/game" class="header__navitem">Game</a>
+      <!-- <a href="/game" class="header__navitem">Game</a> -->
       <a href="/regions" class="header__navitem">Explorar</a>
       <a href="/personajes" class="header__navitem nuxt-link-active" style="margin-left: auto;">Personajes</a>
     </nav>
@@ -19,7 +19,7 @@
   align-items: center;
   justify-content: center;
   height: 80px;
-  padding-right: 500px;
+  padding-right: 550px;
   position: relative;
 }
 
