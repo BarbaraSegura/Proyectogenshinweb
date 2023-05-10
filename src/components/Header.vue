@@ -5,10 +5,10 @@
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <nav class="header__navbar">
-      <a href="/" aria-current="page" class="header__navitem">Inicio</a>
-      <!-- <a href="/game" class="header__navitem">Game</a> -->
+      <a href="/" aria-current="page" class="header__navitem">Inicio</a> 
       <a href="/regions" class="header__navitem">Explorar</a>
-      <a href="/personajes" class="header__navitem nuxt-link-active" style="margin-left: auto;">Personajes</a>
+      <a href="/personajes" class="header__navitem">Personajes</a>
+      <a href="/armas" class="header__navitem">Armas</a>
     </nav>
   </v-app-bar>
 </template>
@@ -19,7 +19,7 @@
   align-items: center;
   justify-content: center;
   height: 80px;
-  padding-right: 550px;
+  padding-right: 540px;
   position: relative;
 }
 
