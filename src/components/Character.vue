@@ -9,7 +9,7 @@
 							{{ solopj.name }}
 						</v-card-title>
 						<v-card-text class="custom-subtitle">
-							{{ solopj.nation }} <br>
+							{{ solopj.weapon }} <br>
 						</v-card-text>
 						<v-card-text class="description" v-if="showDescription">
 							{{ solopj.description }}
